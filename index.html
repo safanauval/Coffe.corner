@@ -26,7 +26,16 @@
     ></script>
 
     <!-- App -->
-    <script src="src/app.js"></script>
+    <script src="src/app.js" async></script>
+
+    <!-- Midtrans -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      type="text/javascript"
+      src="https://app.sandbox.midtrans.com/snap/snap.js"
+      data-client-key="SB-Mid-client-QTXEzcHTJrUtvJYW"
+      async
+    ></script>
   </head>
 
   <body>
@@ -90,6 +99,12 @@
 
         <div class="form-container" x-show="$store.cart.items.length">
           <form action="" id="checkoutForm">
+            <input
+              type="hidden"
+              name="items"
+              x-model="JSON.stringify($store.cart.items)"
+            />
+            <input type="hidden" name="total" x-model="$store.cart.total" />
             <h5>Customer Detail</h5>
 
             <label for="name">
@@ -108,7 +123,7 @@
             </label>
 
             <button
-              class="checkout-button"
+              class="checkout-button disabled"
               type="submit"
               id="checkout-button"
               value="checkout"
@@ -190,8 +205,8 @@
     <section id="contact" class="contact">
       <h2><span>Kontak</span> Kami</h2>
       <p>
-        Hubungi kami untuk pertanyaan, pesanan, atau berbagi pengalaman. Kami
-        siap melayani dengan senang hati.
+        Hubungi kami untuk pertanyaan, pesanan, atau berbagi pengalaman melalui
+        media sosial kami. Kami siap melayani dengan senang hati
       </p>
 
       <div class="row">
@@ -202,22 +217,6 @@
           referrerpolicy="no-referrer-when-downgrade"
           class="map"
         ></iframe>
-
-        <form action="">
-          <div class="input-group">
-            <i data-feather="user"></i>
-            <input type="text" placeholder="nama" />
-          </div>
-          <div class="input-group">
-            <i data-feather="mail"></i>
-            <input type="text" placeholder="email" />
-          </div>
-          <div class="input-group">
-            <i data-feather="smartphone"></i>
-            <input type="text" placeholder="no.hp" />
-          </div>
-          <button type="submit" class="btn">kirim pesan</button>
-        </form>
       </div>
     </section>
     <!-- Contact section end -->
