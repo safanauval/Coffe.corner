@@ -34,10 +34,10 @@ $item_details = array (
   );
 // Optional
 $customer_details = array(
-    'first_name'    => "Andri",
-    'last_name'     => "Litani",
-    'email'         => "andri@litani.com",
-    'phone'         => "081122334455",
+    'first_name'    => "Safa",
+    'last_name'     => "Nauval",
+    'email'         => "nauval@gmail.com",
+    'phone'         => "08121212123344",
     'billing_address'  => $billing_address,
     'shipping_address' => $shipping_address
 );
